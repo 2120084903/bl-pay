@@ -1,0 +1,28 @@
+/*该样式表用于存放有链接的样式*/
+
+
+/*IE提示下载浏览器图标*/
+.BrowserLi .iconBox .imgBoxMain{
+    display: inline-block;
+    width: 76px;
+    height: 76px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -38px;
+    margin-left: -38px;
+    background: url("../../Project/img/Browser.png") no-repeat;
+}
+
+
+
+/*订单支付*/
+.modal-weixin-pay .example {
+    display: none;
+    width: 307px;
+    height: 488px;
+    background: url('../../Project/img/weinxin-pay.png') no-repeat;
+    position: absolute;
+    top: -30px;
+    left: -300px;
+}

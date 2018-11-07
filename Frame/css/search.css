@@ -1,0 +1,30 @@
+/*======媒体查询=====*/
+
+/*适应1366屏幕*/
+@media screen and (max-width: 1400px) and (min-width: 1280px) {
+    .container {
+        width: 1110px;
+    }
+
+    .main {
+        min-width: 1110px;
+    }
+
+}
+
+/*适应1280屏幕*/
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 1000px;
+    }
+
+    .main {
+        min-width: 1000px;
+    }
+
+}
+
+/*全局*/
+@media only screen and (max-width: 1910px) and (min-width: 1280px) {
+
+}

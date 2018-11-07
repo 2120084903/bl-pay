@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>白鹿数据</title>
+    <link rel='icon' href='../img/favicon.icon' type='image/x-ico'/>
+    <!--样式-->
+    <link rel="stylesheet" href="../css/root.css">
+</head>
+<body class="grayBg">
+<div class="main hasSearch">
+    <!--content-->
+    <div class="contenBox">
+        <div class="conMain container pay">
+            <!--订单支付-->
+            <div class="payCon">
+                <!--订单详情-->
+                <div class="payInfo">
+                    <div class="section section-order">
+                        <div class="order-info clearfix">
+                            <div class="fl">
+                                <h2 class="title">白鹿数据收银台</h2>
+                                <p class="order-time">请在尽快完成支付, 超时后将取消订单</p>
+                                <p class="post-info"></p>
+                            </div>
+                            <div class="fr">
+                                <p class="total">
+                                    应付总额：<span class="money"><em>190</em>元</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="order-detail">
+                            <ul>
+                                <li class="clearfix">
+                                    <div class="label">订单号：</div>
+                                    <div class="content">
+                                        <span class="order-num">5180910590503771</span>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="label">商品数量：</div>
+                                    <div class="content">
+                                        <span>1</span>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="label">商品名称：</div>
+                                    <div class="content">
+                                            <span>
+                                                <a href="百科详情.html" target="_blank">白鹿数据-网络预约出租汽车百科</a>
+                                            </span>
+                                    </div>
+                                </li>
+                                <li class="clearfix hide">
+                                    <div class="label">配送时间：</div>
+                                    <div class="content">
+                                        不限送货时间
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section section-payment">
+                        <div class="cash-title"><span>选择以下支付方式付款</span></div>
+                        <div class="payment-box ">
+                            <div class="payment-body">
+                                <ul class="clearfix payment-list">
+                                    <li class="wechat-pay">
+                                        <img src="../img/weixinpay.png" alt="微信支付">
+                                        <i class="iconfont icon-xuanzhong1"></i>
+                                    </li>
+                                </ul>
+                                <div class="payBoxbtn">
+                                    <a href="javascript:;" class="pay-btn">立即支付</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/订单详情-->
+            </div>
+            <!--/订单支付-->
+        </div>
+    </div>
+    <!--/content-->
+</div>
+<!--微信扫码-->
+<div class="modal modal-weixin-pay animated fadeInDown">
+    <div class="modal-hd">
+        <span class="title">微信支付</span>
+        <a class="close" href="javascript: void(0);"><i class="iconfont icon-guanbi3"></i></a>
+    </div>
+    <div class="modal-bd">
+        <div class="code"><img src="../img/pay-code.gif"></div>
+        <div class="msg">
+            请使用 <span>微信</span> 扫一扫完成支付
+            <p>请在<span>30分钟</span>内完成</p>
+        </div>
+    </div>
+
+    <div class="modal-bd hide">
+        <div class="pay-Success">
+            <div class="SuccessHeader">
+                <i class="iconfont icon-gou"></i>
+                <strong>恭喜您，订单支付成功！</strong>
+            </div>
+            <div class="show-txt">
+                <a href="javascript:;">正在为您跳转页面...</a>
+            </div>
+        </div>
+    </div>
+    <div class="example"></div>
+</div>
+<div class="modalMask"></div>
+<!--/微信扫码-->
+
+<!--javascript-->
+<script src="../../Frame/js/jQuery/jquery-1.8.0.min.js"></script>
+<script src="../../Frame/layui/layui.all.js"></script>
+<script src="../js/custom.js"></script>
+<script>
+
+    // 支付方式选择
+    $('.payment-list li').click(function () {
+        $(this).toggleClass('active');
+    });
+    // 微信支付弹窗
+    $('.pay-btn').click(function () {
+        if ($('.payment-list li').hasClass('active')){
+            $('html').addClass('scrollbar');
+            $('.modal-weixin-pay,.modalMask').show();
+        }
+        else {
+            layer.msg('请选择支付方式！',{
+                time:1500,
+            });
+        }
+    });
+
+    $('.close').click(function () {
+        $('.modal-weixin-pay,.modalMask').hide();
+        $('html').removeClass('scrollbar');
+    });
+
+    $(".code").hover(function () {
+        $(".modal-weixin-pay .example").stop().fadeIn(300);
+    }, function () {
+        $(".modal-weixin-pay .example").stop().fadeOut(300);
+    });
+
+</script>
+</body>
+
+</html>

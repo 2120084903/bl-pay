@@ -1,0 +1,436 @@
+/*主要的*/
+
+
+/*================================订单支付=================================*/
+
+.pay, .modal {
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.section {
+    padding: 30px 48px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    color: #424242;
+    font-size: 14px;
+}
+
+.section-order {
+    position: relative;
+    margin-top: 30px;
+}
+
+.order-info {
+    padding: 20px 0;
+}
+
+.order-info .title {
+    margin-bottom: 10px;
+    color: #1D9ED2;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 36px;
+}
+
+.order-info .order-time {
+    color: #616161;
+    margin-bottom: 5px;
+    line-height: 2;
+}
+
+.order-info .order-time span {
+    margin: 0 5px;
+    color: #ff6700;
+}
+
+.order-info .post-info {
+    color: #616161;
+    -webkit-transition: height .3s ease;
+    transition: height .3s ease;
+}
+
+.order-info .fr {
+    float: right;
+    text-align: right;
+}
+
+.order-info .total {
+    color: #757575;
+}
+
+.money {
+    color: #ff6700;
+    font-size: 14px;
+}
+
+.money em {
+    font-style: normal;
+    font-size: 40px;
+    margin-right: 5px;
+    font-weight: bolder;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.order-info .show-detail .iconfont {
+    font-size: 24px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+.section-order .icon-right {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    font-size: 80px;
+    color: #83c44e;
+    text-align: center;
+    border: 2px solid #83c44e;
+    border-radius: 42px;
+    overflow: hidden;
+    _zoom: 1;
+}
+
+.show-detail {
+    color: #757575;
+    font-size: 15px;
+}
+
+.order-detail {
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.order-detail ul {
+    padding: 0;
+}
+
+.order-detail li {
+    line-height: 24px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.order-detail .label {
+    float: left;
+    width: 85px;
+}
+
+.order-detail .content {
+    float: left;
+}
+
+.order-detail .content .spImg {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.order-detail .content .spImg img {
+    width: 100%;
+}
+
+.order-detail .order-num {
+    color: #ff6700;
+    font-size: 18px;
+}
+
+.cash-title {
+    height: 50px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 18px;
+}
+
+.payment-box {
+    margin-bottom: 0;
+}
+
+.payment-box .payment-header {
+    margin-bottom: 15px;
+}
+
+.payment-box .payment-header .title {
+    float: left;
+    font-size: 16px;
+    color: #616161;
+    font-weight: bolder;
+}
+
+.payment-box .payment-header .desc {
+    float: left;
+    margin-left: 10px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+.payment-list {
+    margin: 0 0 0 -14px;
+    padding: 0;
+    overflow: hidden;
+    _zoom: 1;
+}
+
+.payment-list li {
+    float: left;
+    width: 174px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    _zoom: 1;
+    border-radius: 2px;
+    /*-webkit-transition: all .4s;*/
+    /*transition: all .4s;*/
+    position: relative;
+}
+
+.payment-list li img {
+    cursor: pointer;
+    margin-left: -10px;
+}
+
+.payment-list li:first-child img {
+    margin-left: 0;
+}
+
+.payment-list li i {
+    display: none;
+    position: absolute;
+    right: -1px;
+    bottom: -2px;
+    color: #1D9ED2;
+    line-height: normal;
+    font-size: 26px;
+}
+
+.payment-list li.active {
+    border-color: #1D9ED2;
+}
+
+.payment-list li.active i {
+    display: block;
+}
+
+.modalMask {
+    display: none;
+    position: fixed !important;
+    _position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    opacity: 0.4;
+    filter: alpha(opacity=40) \9;
+    background-color: #000;
+}
+
+.modal {
+    display: none;
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
+    _position: absolute;
+    _top: 15%;
+    _margin-top: 0;
+    z-index: 1050;
+    width: 660px;
+    margin-left: -330px;
+    margin-top: -300px;
+    background-color: #fff;
+    outline: none;
+}
+
+.modal-weixin-pay {
+    width: 370px;
+    height: 440px;
+    margin-top: -220px;
+    margin-left: -185px;
+}
+
+.modal-header, .modal-hd {
+    position: relative;
+    height: 32px;
+    padding: 14px 20px;
+    background-color: #E7F1FF;
+}
+
+.modal-header h3, .modal-header .title, .modal-hd h3, .modal-hd .title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #424242;
+}
+
+.modal .close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #8c97a6;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    z-index: 10;
+    border-radius: 15px;
+}
+
+.modal .close:hover {
+    color: #fff;
+    background-color: #e53935;
+}
+
+.modal .close .iconfont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -12px;
+    font-size: 24px;
+    font-weight: 200;
+    vertical-align: middle;
+}
+
+.modal-body, .modal-bd {
+    position: relative;
+    max-height: 400px;
+    padding: 40px 60px;
+}
+
+.modal-weixin-pay .modal-bd {
+    height: 360px;
+    padding: 0 40px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-weixin-pay .code {
+    width: 220px;
+    height: 220px;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: inline-block;
+    position: relative;
+}
+
+.modal-weixin-pay .code img {
+    max-width: 100%;
+}
+
+.modal-weixin-pay .msg span {
+    color: #ff6700;
+    cursor: pointer;
+}
+
+.pay-Success {
+    padding: 70px 0 50px 0;
+    background-color: #fff;
+}
+
+.pay-Success .SuccessHeader {
+    text-align: center;
+    margin-top: 0;
+    font-size: 18px;
+    color: #569a20;
+}
+
+.pay-Success .SuccessHeader i {
+    font-size: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #83c44e;
+    text-align: center;
+    border: 2px solid #83c44e;
+    border-radius: 42px;
+    overflow: hidden;
+}
+
+.pay-Success .show-txt {
+    text-align: center;
+    margin: 50px 0 30px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.pay-Success .btnLook {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pay-Success .btnLook a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    background: #FE7C1D;
+    border-radius: 2px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 40px;
+    margin: 0 10px;
+}
+
+.pay-Success .btnLook a:hover {
+    background: #ea7118;
+}
+
+.pay-Success .btnLook a.fhsy {
+    background-color: #1D9ED2;
+}
+
+.pay-Success .btnLook a.fhsy:hover {
+    background: #188fc0;
+}
+
+.pay-fail .SuccessHeader .iconfont {
+    color: #F9552A;
+}
+
+.pay-fail .SuccessHeader i {
+    border: 2px solid #F9552A;
+}
+
+.pay-fail .SuccessHeader {
+    color: #F9552A;
+}
+
+.payBoxbtn {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.payBoxbtn .pay-btn {
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 15px;
+    color: #fff;
+    line-height: 40px;
+    background: #F9552A;
+}
+
+.payBoxbtn .pay-btn:hover {
+    background: #ee4e23;
+}
